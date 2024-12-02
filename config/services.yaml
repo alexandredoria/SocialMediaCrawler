@@ -22,3 +22,21 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    DoctrineFixtures\:
+        resource: '../database/fixtures/'
+    
+    App\MessageHandler\:
+        resource: '../src/MessageHandler'
+        tags: ['messenger.message_handler']
+
+    Symfony\Component\DependencyInjection\ContainerInterface: 
+        alias: 'service_container'
+    
+    App\Service\SocialMediaCrawler\InstagramScraperStrategy:
+        autowire: true
+        autoconfigure: true
+        public: true
+        arguments:
+            $httpClient: '@Symfony\Contracts\HttpClient\HttpClientInterface'
+            $zyteApiKey: '%env(ZYTE_API_KEY)%'
