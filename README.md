@@ -83,12 +83,6 @@ Check for PSR12 coding standard violations, bugs, and potential issues:
 make check
 ```
 
-### 4. Load Data Fixtures
-Seed the database with sample data:
-```bash
-make data-fixtures
-```
-
 [1]: https://symfony.com/doc/current/best_practices.html
 [2]: https://www.instagram.com/gunshorts
 [3]: https://www.instagram.com/forgottenweapons
