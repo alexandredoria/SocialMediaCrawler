@@ -74,7 +74,7 @@ make test
 ### 2. Generate Code Coverage Report
 Create an HTML code coverage report in the /public/coverage directory:
 
-![The coverage dashboard.](/public/images/current_coverage.png "The coverage dashboard.")
+![The coverage dashboard.](/public/images/coverage.png "The coverage dashboard.")
 
 ```bash
 make coverage
