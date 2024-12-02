@@ -74,7 +74,11 @@
             "@auto-scripts"
         ],
         "test": "phpunit",
-        "coverage": "XDEBUG_MODE=coverage phpunit --coverage-html public/coverage"
+        "coverage": "XDEBUG_MODE=coverage phpunit --coverage-html public/coverage",
+        "phpmd": "phpmd ./src ansi phpmd.ruleset.xml",
+        "phpstan": "phpstan",
+        "fix": "phpcbf --standard=PSR12 --colors ./src",
+        "sniff": "phpcs --standard=PSR12 --colors ./src"
     },
     "conflict": {
         "symfony/symfony": "*"

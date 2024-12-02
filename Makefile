@@ -18,6 +18,15 @@ test:
 coverage:
 	./shell/composer coverage
 
+.PHONY: check
+check:
+	{ \
+	./shell/composer fix ;\
+	./shell/composer sniff ;\
+	./shell/composer phpmd ;\
+	./shell/composer phpstan ;\
+	}
+
 .PHONY: migrations
 migrations:
 	php bin/console doctrine:migrations:migrate
