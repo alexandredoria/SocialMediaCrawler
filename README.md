@@ -73,12 +73,12 @@ make test
 
 ### 2. Generate Code Coverage Report
 Create an HTML code coverage report in the /public/coverage directory:
-
-![The coverage dashboard.](/public/images/coverage.png "The coverage dashboard.")
-
 ```bash
 make coverage
 ```
+
+![The coverage dashboard.](/public/images/coverage.png "The coverage dashboard.")
+
 
 ### 3. Check Code Standards and Potential Issues
 Check for PSR12 coding standard violations, bugs, and potential issues:
