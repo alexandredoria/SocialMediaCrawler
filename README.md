@@ -104,7 +104,7 @@ make coverage
 
 
 ### 3. Check code standards and potential issues
-Check for PSR12 coding standard violations, bugs, and potential issues:
+Check for PSR12 coding standard violations, bugs, and potential issues using static code analysis tools:
 ```bash
 make check
 ```
