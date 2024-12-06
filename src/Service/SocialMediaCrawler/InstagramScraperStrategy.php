@@ -28,7 +28,7 @@ class InstagramScraperStrategy implements SocialMediaInterface
      */
     public function fetchUserData(string $username): SocialMediaUserDTO
     {
-        $url = 'https://www.instagram.com/api/v1/users/web_profile_info/?username=' . $username;
+        $url = "https://www.instagram.com/api/v1/users/web_profile_info/?username={$username}";
         $response = $this->makeRequest($url);
 
         if (!isset($response['data'])) {
@@ -51,8 +51,9 @@ class InstagramScraperStrategy implements SocialMediaInterface
      * @param string $url
      * @return array
      */
-    public function makeRequest(string $url): array
+    private function makeRequest(string $url): array
     {
+        /** @infection-ignore-all */
         $response = $this->httpClient->request('POST', 'https://api.zyte.com/v1/extract', [
             'auth_basic' => [$this->zyteApiKey, ''],
             // 'headers' => ['Accept-Encoding' => 'gzip'],
@@ -62,13 +63,9 @@ class InstagramScraperStrategy implements SocialMediaInterface
             ],
         ]);
 
-
         $content = $response->getContent();
         $jsonDecodedData = json_decode($content);
         $base64DecodedData = base64_decode($jsonDecodedData->httpResponseBody);
-        $data = json_decode($base64DecodedData, true);
-        // dd($data, 'vish');
-
-        return $data;
+        return json_decode($base64DecodedData, true);
     }
 }

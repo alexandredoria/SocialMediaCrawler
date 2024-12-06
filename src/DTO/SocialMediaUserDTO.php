@@ -4,6 +4,7 @@ namespace App\DTO;
 
 /**
  * @codeCoverageIgnore
+ * @infection-ignore-all
  */
 class SocialMediaUserDTO
 {

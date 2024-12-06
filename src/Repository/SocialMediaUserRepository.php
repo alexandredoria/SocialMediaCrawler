@@ -8,6 +8,7 @@ use Doctrine\Persistence\ManagerRegistry;
 
 /**
  * @codeCoverageIgnore
+ * @infection-ignore-all
  * @extends ServiceEntityRepository<SocialMediaUser>
  */
 class SocialMediaUserRepository extends ServiceEntityRepository

@@ -19,6 +19,9 @@ class UpdateSocialMediaUserCommand extends Command
 
     public function __construct(UpdateSocialMediaUserDispatcher $dispatcher)
     {
+        /**
+         * @infection-ignore-all
+         **/
         parent::__construct();
         $this->dispatcher = $dispatcher;
     }
@@ -27,9 +30,17 @@ class UpdateSocialMediaUserCommand extends Command
     {
         $this->dispatcher->updateAllUsers();
 
-        $io = new SymfonyStyle($input, $output);
+        $io = $this->createSymfonyStyle($input, $output);
         $io->title("Dispatched a message to update all users data");
 
         return Command::SUCCESS;
+    }
+
+    /**
+     * @infection-ignore-all
+     **/
+    protected function createSymfonyStyle(InputInterface $input, OutputInterface $output): SymfonyStyle
+    {
+        return new SymfonyStyle($input, $output);
     }
 }

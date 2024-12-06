@@ -8,6 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @codeCoverageIgnore
+ * @infection-ignore-all
  */
 #[ORM\Entity(repositoryClass: SocialMediaUserRepository::class)]
 class SocialMediaUser

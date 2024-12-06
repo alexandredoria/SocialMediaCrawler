@@ -43,6 +43,9 @@ final class UpdateSocialMediaUserHandlerTest extends TestCase
         $socialMediaFactoryMock->expects($this->once())->method('create')->willReturn($socialMediaStrategyMock);
 
         $entityManagerMock = $this->createMock(EntityManagerInterface::class);
+        $entityManagerMock->expects($this->once())->method('persist');
+        $entityManagerMock->expects($this->once())->method('flush');
+
         $messageMock = $this->createMock(UpdateSocialMediaUserMessage::class);
 
         $handler = new UpdateSocialMediaUserHandler(
