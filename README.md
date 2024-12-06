@@ -87,14 +87,19 @@ Then, run the message dispatcher (steps 7 or 8) simultaneously in a different te
 
 ## Development environment
 
+### 1. Check code standards and potential issues
+Check for PSR12 coding standard violations, bugs, and potential issues using static code analysis tools:
+```bash
+make check
+```
 
-### 1. Run unit tests
+### 2. Run unit tests
 Execute all unit tests:
 ```bash
 make test
 ```
 
-### 2. Generate code coverage report
+### 3. Generate code coverage report
 Create an HTML code coverage report in the /public/coverage directory:
 ```bash
 make coverage
@@ -103,11 +108,13 @@ make coverage
 ![The coverage dashboard.](/public/images/coverage.png "The coverage dashboard.")
 
 
-### 3. Check code standards and potential issues
-Check for PSR12 coding standard violations, bugs, and potential issues using static code analysis tools:
+### 4. Check mutations on tests
+Execute mutants against the covered tests set to see if seeded faults can be detected:
 ```bash
-make check
+make test-mutation
 ```
+
+![The coverage dashboard.](/public/images/infection.png "The infection dashboard.")
 
 [1]: https://symfony.com/doc/current/best_practices.html
 [2]: https://www.instagram.com/gunshorts
