@@ -18,6 +18,10 @@ test:
 coverage:
 	./shell/composer coverage
 
+.PHONY: test-mutation
+test-mutation:
+	./shell/composer test-mutation
+
 .PHONY: check
 check:
 	{ \

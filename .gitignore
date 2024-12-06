@@ -17,4 +17,8 @@
 /public/coverage
 ###< phpunit/phpunit ###
 
+###> infection/infection ###
+/public/infection
+###< infection/infection ###
+
 /.vscode

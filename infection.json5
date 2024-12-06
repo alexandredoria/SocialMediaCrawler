@@ -1,0 +1,12 @@
+{
+    "source": {
+        "directories": [
+            "src/"
+        ]
+    },
+    "logs": {
+        "html": "public/infection/result.html"
+    },
+    "tmpDir": "./tmp",
+    "testFramework": "phpunit"
+}
