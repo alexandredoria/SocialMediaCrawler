@@ -27,6 +27,7 @@
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.7",
         "infection/infection": "^0.29.8",
+        "overtrue/phplint": "^9.5",
         "phpmd/phpmd": "^2.15",
         "phpstan/phpstan": "^2.0",
         "phpunit/phpunit": "^11.4",
@@ -81,6 +82,7 @@
         "phpmd": "phpmd ./src ansi phpmd.ruleset.xml",
         "phpstan": "phpstan",
         "fix": "phpcbf --standard=PSR12 --colors ./src",
+        "phplint": "phplint",
         "sniff": "phpcs --standard=PSR12 --colors ./src"
     },
     "conflict": {

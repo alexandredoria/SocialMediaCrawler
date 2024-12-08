@@ -34,6 +34,7 @@ update-dispatcher:
 check:
 	{ \
 	./shell/composer fix ;\
+	./shell/composer phplint ;\
 	./shell/composer sniff ;\
 	./shell/composer phpmd ;\
 	./shell/composer phpstan ;\

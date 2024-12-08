@@ -2,6 +2,8 @@ parameters:
     level: 6
     paths:
         - ./src
+        - ./tests
+        - ./database
     tmpDir: tmp
     parallel:
         maximumNumberOfProcesses: 4
