@@ -13,9 +13,6 @@ framework:
             # Route your messages to the transports
             # 'App\Message\YourMessage': async
             'App\Message\UpdateSocialMediaUserMessage': async
-            'App\Service\SocialMediaCrawler\UpdateSocialMediaUserDispatcher': async
-            'App\Scheduler\Task\UpdateSocialMediaUserScheduler': async
-            # 'App\Scheduler\Task\UpdateSocialMediaUserDispatcher': async
 
 # when@test:
 #    framework:
