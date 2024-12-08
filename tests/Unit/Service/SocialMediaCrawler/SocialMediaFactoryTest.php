@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface as Container;
 #[CoversClass(SocialMediaFactory::class)]
 final class SocialMediaFactoryTest extends TestCase
 {
-    public function testFactoryShouldThrowAnExceptionIfPlatformWasNotFound()
+    public function testFactoryShouldThrowAnExceptionIfPlatformWasNotFound(): void
     {
         $this->expectException(SocialMediaFactoryException::class);
 
@@ -26,7 +26,7 @@ final class SocialMediaFactoryTest extends TestCase
         $socialMediaFactory->create('unknown');
     }
 
-    public function testFactoryShouldReturnAStrategyInstance()
+    public function testFactoryShouldReturnAStrategyInstance(): void
     {
 
         $strategyStub = $this->createStub(InstagramScraperStrategy::class);

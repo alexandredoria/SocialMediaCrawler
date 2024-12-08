@@ -13,7 +13,7 @@ use Symfony\Component\HttpClient\Response\MockResponse;
 #[CoversClass(InstagramScraperStrategy::class)]
 final class InstagramScraperStrategyTest extends TestCase
 {
-    public function testStrategyShouldFetchUserData()
+    public function testStrategyShouldFetchUserData(): void
     {
         $mockData = [
             "data" => [
@@ -51,7 +51,7 @@ final class InstagramScraperStrategyTest extends TestCase
         $this->assertInstanceOf(SocialMediaUserDTO::class, $response);
     }
 
-    public function testStrategyShouldThrowAnExceptionIfUserNotFound()
+    public function testStrategyShouldThrowAnExceptionIfUserNotFound(): void
     {
         $this->expectException(UserNotFoundException::class);
 

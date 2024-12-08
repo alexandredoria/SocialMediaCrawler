@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(UpdateSocialMediaUserMessage::class)]
 final class UpdateSocialMediaUserMessageTest extends TestCase
 {
-    public function testBusMessageShouldGetSocialMediaUserId()
+    public function testBusMessageShouldGetSocialMediaUserId(): void
     {
         $userMock = $this->createMock(SocialMediaUser::class);
         $userMock->method('getId')->willReturn(46);

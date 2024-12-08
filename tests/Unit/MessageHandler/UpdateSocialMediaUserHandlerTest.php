@@ -17,7 +17,7 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(UpdateSocialMediaUserHandler::class)]
 final class UpdateSocialMediaUserHandlerTest extends TestCase
 {
-    public function testBusHandlerShouldFetchData()
+    public function testBusHandlerShouldFetchData(): void
     {
         $userMock = $this->createMock(SocialMediaUser::class);
 
