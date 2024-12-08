@@ -12,19 +12,23 @@ install:
 
 .PHONY: migrations
 migrations:
-	php bin/console doctrine:migrations:migrate
+	./shell/php bin/console doctrine:migrations:migrate
 
 .PHONY: data-fixtures
 data-fixtures:
-	php bin/console doctrine:fixtures:load
+	./shell/php bin/console doctrine:fixtures:load
 
 .PHONY: messenger-worker
 messenger-worker:
-	php bin/console messenger:consume async -vv
+	./shell/php bin/console messenger:consume async -vv
 
 .PHONY: scheduler-worker
 scheduler-worker:
-	php bin/console messenger:consume scheduler_default -vv
+	./shell/php bin/console messenger:consume scheduler_default -vv
+
+.PHONY: update-dispatcher
+update-dispatcher:
+	./shell/php bin/console app:update-all-social-media-user
 
 .PHONY: check
 check:

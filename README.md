@@ -69,7 +69,7 @@ make scheduler-worker
 ### 8. Update social media user data by command (optional)
 Dispatch a command to update all social media user data:
 ```bash
-php bin/console app:update-all-social-media-user
+make update-dispatcher
 ```
 
 ## Tips for schedulers or commands
@@ -85,7 +85,7 @@ Then, run the message dispatcher (steps 7 or 8) simultaneously in a different te
 >
 >   ![Running a command as message dispatcher.](/public/images/run-command.png "Running a command as message dispatcher.")
 
-## Development environment
+# Development environment
 
 ### 1. Check code standards and potential issues
 Check for PSR12 coding standard violations, bugs, and potential issues using static code analysis tools:
