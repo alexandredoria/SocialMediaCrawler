@@ -49,7 +49,7 @@ class InstagramScraperStrategy implements SocialMediaInterface
      * Make a request to the url using a proxy manager
      *
      * @param string $url
-     * @return array
+     * @return array<string, mixed>
      */
     private function makeRequest(string $url): array
     {

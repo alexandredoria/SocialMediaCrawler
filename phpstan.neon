@@ -7,10 +7,3 @@ parameters:
     tmpDir: tmp
     parallel:
         maximumNumberOfProcesses: 4
-    ignoreErrors:
-        -
-            identifier: missingType.generics
-        -
-            identifier: missingType.iterableValue
-        -
-            identifier: property.unusedType
